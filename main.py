@@ -123,6 +123,7 @@ def start(max_people):
     main(max_people)
 
 if __name__ == "__main__":
+    ## START ##
     max_people = 100
     start(max_people) 
     
