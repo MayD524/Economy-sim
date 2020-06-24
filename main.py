@@ -90,8 +90,8 @@ def make_transactions():
         return
     
     
-
 def change_seller():
+
     for i in sellers.keys():
         if sellers[i]['sold'] == False:
             sellers[i]['value'] -= 10
@@ -99,6 +99,10 @@ def change_seller():
         elif sellers[i]['sold'] == True:
             sellers[i]['value'] += 10
             sellers[i]['bar'] += 10
+            sellers[i]['sold'] = False
+    for i in buyers.keys():
+        if buyers[i]['bought'] == True:
+            buyers[i]['bought'] = False
 
 
 def main(max_people):
